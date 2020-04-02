@@ -3,8 +3,8 @@ import { connect as tickerConnect } from '../services';
 import { connect } from 'react-redux';
 import React, { PureComponent } from 'react';
 import { StockChart } from './StockChart.jsx';
-import { UPDATE_STOCK_TICKER } from '../reducers/types';
-import { StockData } from './StockPanel.jsx';
+import { updateStockTicker } from '../reducers/actionCreators';
+import { StockData } from './StockData.jsx';
 import UpdateInterval from './UpdateInterval.jsx';
 
 const PRICES_LEN = 10;
@@ -45,9 +45,8 @@ class App extends PureComponent {
 }
 
 const mapStateToProps = state => ({ ticker: state });
-const mapDispatchToProps = dispatch => ({
-    updateStockTicker: data =>
-    dispatch({ type: UPDATE_STOCK_TICKER, payload: data })
-});
+const mapDispatchToProps = {
+    updateStockTicker,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
