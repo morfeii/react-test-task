@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 
-export const StockQuotesData = ({ initialPrice, ticker }) => {
+export const StockData = ({ initialPrice, ticker }) => {
     const priceFound = initialPrice && ticker.price;
 
     let priceUnitChanged = 0;
