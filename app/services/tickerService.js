@@ -19,3 +19,7 @@ export const connect = (stockSymbol) => {
         console.log('disconnected');
     });
 };
+
+export const changeInterval = ms => {
+    socket.emit('changeInterval', ms);
+};
