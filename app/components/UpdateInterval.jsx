@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import PropTypes from 'prop-types';
 import { changeInterval } from '../services/tickerService';
 
 const timeValues = [500, 1000, 5000, 10000];
@@ -41,4 +42,8 @@ export const UpdateInterval = ({ ticker }) => {
       </div>
     </div>
   );
+};
+
+UpdateInterval.propTypes = {
+    ticker: PropTypes.string.isRequired,
 };

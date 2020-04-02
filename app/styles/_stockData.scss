@@ -1,0 +1,68 @@
+.stock-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 35px;
+
+  .exchange-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .stock-symbol {
+      font-size: 40px;
+      font-weight: 500;
+      letter-spacing: 0.2rem;
+    }
+
+    .exchange {
+      font-size: 14px;
+      letter-spacing: 0.05rem;
+      transform: translateY(-5px);
+    }
+  }
+
+  .trade-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .price-changes {
+      display: flex;
+      align-items: flex-end;
+
+      span {
+        margin-left: 15px;
+      }
+
+      .current-price {
+        font-size: 30px;
+        font-weight: 400;
+        transform: translateY(3px);
+      }
+
+      .change-units[data-change='increased'],
+      .change-percent[data-change='increased'] {
+        color: $increased;
+
+        &::before {
+          content: '+';
+        }
+      }
+
+      .change-units[data-change='decreased'],
+      .change-percent[data-change='decreased'] {
+        color: $decreased;
+      }
+    }
+
+    .last-trade {
+      .time {
+        font-size: 14px;
+        font-weight: 300;
+        font-style: italic;
+        letter-spacing: 0.1rem;
+      }
+    }
+  }
+}

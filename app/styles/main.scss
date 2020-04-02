@@ -1,0 +1,18 @@
+@import './constants';
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins';
+}
+
+body {
+  width: 80vw;
+  height: 100vw;
+  overflow: hidden;
+  background-color: white;
+}
+
+@import './stockChart';
+@import './stockData';
+@import './updateInterval';

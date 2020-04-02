@@ -1,5 +1,7 @@
 import React from 'react';
 import moment from 'moment';
+import PropTypes from 'prop-types';
+
 
 export const StockData = ({ initialPrice, ticker }) => {
     const priceFound = initialPrice && ticker.price;
@@ -50,4 +52,9 @@ export const StockData = ({ initialPrice, ticker }) => {
       </div>
     </div>
   );
+};
+
+StockData.propTypes = {
+    initialPrice: PropTypes.string.isRequired,
+    ticker: PropTypes.string.isRequired,
 };
