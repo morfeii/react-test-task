@@ -45,5 +45,5 @@ export const UpdateInterval = ({ ticker }) => {
 };
 
 UpdateInterval.propTypes = {
-    ticker: PropTypes.string.isRequired,
+    ticker: PropTypes.object.isRequired,
 };

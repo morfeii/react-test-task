@@ -7,10 +7,10 @@ import Root from './containers/Root';
 const store = configureStore();
 
 render(
-    <AppContainer>
-        <Root store={store} history={history} />
-    </AppContainer>,
-    document.getElementById('root')
+  <AppContainer>
+    <Root store={store} history={history} />
+  </AppContainer>,
+  document.getElementById('root')
 );
 
 if (module.hot) {
@@ -20,10 +20,10 @@ if (module.hot) {
         const newHistory = newConfigureStore.history;
         const NewRoot = require('./containers/Root').default;
         render(
-            <AppContainer>
-                <NewRoot store={newStore} history={newHistory} />
-            </AppContainer>,
-            document.getElementById('root')
-        );
+      <AppContainer>
+        <NewRoot store={newStore} history={newHistory} />
+      </AppContainer>,
+      document.getElementById('root')
+    );
     });
 }

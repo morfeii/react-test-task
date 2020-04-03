@@ -3,9 +3,9 @@ import { connect as tickerConnect } from '../services';
 import { connect } from 'react-redux';
 import React, { PureComponent } from 'react';
 import { StockChart } from './StockChart.jsx';
-import { updateStockTicker } from '../reducers/actionCreators';
 import { StockData } from './StockData.jsx';
-import UpdateInterval from './UpdateInterval.jsx';
+import { UpdateInterval } from './UpdateInterval.jsx';
+import { updateStockTicker } from '../reducers/actionCreators';
 
 const PRICES_LEN = 10;
 
